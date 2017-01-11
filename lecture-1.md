@@ -44,30 +44,30 @@ Midterm (March 17) + final exam (April 24 + or - week).
     e ::= tru | fls | e or e | not e
 
 (You could also put `e1 or e2` instead of `e or e`.) Tell me some examples of programs
-in this language. Try to do it ``inductively'' (``in layers'').
+in this language. Try to do it “inductively” (“in layers”).
 
 We used BNF above but we also could go inductively, define a set `T` of valid terms in this language:
 
 1. `{tru, fls} \subset T.`
-2. If `e1 \in T and e2 \in T` then `e1 or e2 \in T.`
-3. If `e \in T` then `not e \in T.`
+2. If `e1 ∈ T and e2 ∈ T` then `e1 or e2 ∈ T.`
+3. If `e ∈ T` then `not e ∈ T.`
 
 We could also go axiomatically:
 
     ------------
-    tru \in T
+    tru ∈ T
 
 
     ------------
-    fls \in T
+    fls ∈ T
 
-    e1 \in T, e2 \in T
+    e1 ∈ T, e2 ∈ T
     -------------------
-    e1 or e2 \in T
+    e1 or e2 ∈ T
 
-    e \in T
+    e ∈ T
     -------------------
-    not e \in T
+    not e ∈ T
 
 
 As an example of terms we encountered one with *parenthesis*. These are the part of 
@@ -103,9 +103,9 @@ to formalize we will invent a notion of **expression context**:
 This in fact is wrong, because again we cant get a hole somewere in the leaf nodes
 of AST. THe right grammar is not much more complex:
 
-    C ::= [] | C or e | e or C     // WRONG
+    C ::= [] | C or e | e or C     // RIGHT
 
-Now we could define a mapping for filling-in the holes: $(e, C) \to C[e]$ 
+Now we could define a mapping for filling-in the holes: `(e, C) → C[e]` 
 (the result is expression, of course) and extend ↪:
 
     e1 ↪ e2, C is a context

@@ -105,10 +105,15 @@ of AST. THe right grammar is not much more complex:
 
     C ::= [] | C or e | e or C     // RIGHT
 
-Now we could define a mapping for filling-in the holes: `(e, C) → C[e]` 
-(the result is expression, of course) and extend ↪:
+Now we could define a mapping for filling-in the holes: `(e, C) → C[e]` -- 
+pluging a context (the result is expression, of course) and extend ↪:
 
     e1 ↪ e2, C is a context
     ------------------------------
     C[e1] ↪ C[e2]
 
+Sometimes we'd like to write some other "arrow" (say, `=>`) instead of `↪` at the bottom: in 
+this case we think of `↪` as a relation for *primitive* reductions and `=>` as a relation for
+*whole programs*.
+
+Note that semantics given as such is non-deterministic.

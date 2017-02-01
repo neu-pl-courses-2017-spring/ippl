@@ -59,8 +59,7 @@ Note on terminology: `e1 \equiv_{ctx} e2` sometimes called `e1 \equiv_{obs} e2`,
 
 We do not like arrows, so we introduce **De Brujin notation**...
 
-
-## 
+## Computational context for reduction strategies
 
 Recall that we defined reduction strategies by means of logical relations. We can try another way (already presented for BOR language).
 
